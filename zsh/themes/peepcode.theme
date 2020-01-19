@@ -38,11 +38,29 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+
 git_prompt() {
   local cb=$(current_branch)
   if [ -n "$cb" ]; then
     local repo_path=$(git_repo_path)
     echo " %{$fg_bold[yellow]%}$cb %{$fg[white]%}$(git_commit_id)%{$reset_color%}$(git_mode)$(git_dirty)"
+  fi
+}
+
+ruby_version() {
+  asdf current ruby | awk -F' ' '{print "ruby-"$1}'
+}
+
+elixir_version() {
+  asdf current elixir | awk -F' ' '{print "elixir-"$1}'
+}
+
+show_version() {
+  MIX_EXS_FILE=mix.exists
+  if test -f "$MIX_EXS_FILE"; then
+    elixir_version
+  else
+    ruby_version
   fi
 }
 

@@ -61,7 +61,7 @@ alias zrl='source ~/.zshrc.local'
 alias hfull='history 1 -1'
 
 # Git Aliases
-alias gs='git status'
+alias gs='git status -sb'
 alias gst='git status'
 alias gsts='git stash'
 alias gstsh='git stash'
@@ -166,3 +166,15 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew d
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
 # vim: ft=zsh
+
+# Docker and docker-compose
+alias dcb='docker-compose build'
+alias dcr='docker-compose run --rm --service-ports'
+alias dcd='docker-compose down'
+
+# General unix Aliases
+alias aliass='alias | grep'
+alias myfolder='sudo chown -R $(whoami)'
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias applyenv='for line in $(cat .env); do export "$line"; done'
+alias processport='netstat -vanp tcp | grep LISTEN | grep'

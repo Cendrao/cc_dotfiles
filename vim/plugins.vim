@@ -28,6 +28,7 @@ Plug 'rking/ag.vim'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
+Plug 'elixir-editors/vim-elixir'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local
