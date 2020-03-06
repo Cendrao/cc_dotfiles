@@ -1,0 +1,26 @@
+# git
+
+alias gs='git status -sb'
+alias update_master='~/.aliases_script/update_master.sh'
+alias use_env='~/.aliases_script/run_env.sh'
+
+# general unix aliases
+
+alias aliass='alias | grep'
+
+alias myfolder='sudo chown -R $(whoami) .'
+
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+alias coverage='chrome coverage/index.html'
+alias critic='chrome tmp/rubycritic/overview.html'
+
+alias applyenv='for line in $(cat .env); do export "$line"; done'
+
+alias processport='netstat -vanp tcp | grep LISTEN | grep'
+
+# docker
+
+alias dcb='docker-compose build'
+alias dcr='docker-compose run --service-ports --rm'
+alias dcd='docker-compose down'
