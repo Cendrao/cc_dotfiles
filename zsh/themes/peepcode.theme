@@ -38,7 +38,6 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
-
 git_prompt() {
   local cb=$(current_branch)
   if [ -n "$cb" ]; then
@@ -56,7 +55,7 @@ elixir_version() {
 }
 
 show_version() {
-  MIX_EXS_FILE=mix.exists
+  MIX_EXS_FILE=mix.exs
   if test -f "$MIX_EXS_FILE"; then
     elixir_version
   else
