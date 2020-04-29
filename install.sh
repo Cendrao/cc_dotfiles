@@ -24,6 +24,8 @@ then
       git checkout "$(git describe --abbrev=0 --tags)"
       echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
       echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+      asdf plugin-add ruby
+      asdf install ruby 2.8.0
       ;;
     CYGWIN* | MSYS*)
       echo 'You are using a Windows which is not recommended to use with out dotfiles.'
