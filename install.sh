@@ -27,6 +27,7 @@ then
       source ~/.bashrc
       asdf plugin-add ruby
       asdf install ruby 2.7.1
+      asdf global ruby 2.7.1
       ;;
     CYGWIN* | MSYS*)
       echo 'You are using a Windows which is not recommended to use with out dotfiles.'
